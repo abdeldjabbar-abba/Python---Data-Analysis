@@ -1,0 +1,51 @@
+%config InlineBackend.figure_format = "retina"
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+NEON = [
+    "#00F5D4", "#8B5CF6", "#FF4D8D",
+    "#FFD166", "#4CC9F0", "#B8F2E6"
+]
+
+sns.set_theme(
+    style="darkgrid",
+    context="notebook",
+    palette=NEON,
+    font_scale=0.85,
+    rc={
+        # Keep the same plot dimensions
+        "figure.figsize": (9, 4),
+        "figure.dpi": 100,
+        "savefig.dpi": 300,
+
+        # Dark neon appearance
+        "figure.facecolor": "#0B1020",
+        "axes.facecolor": "#111827",
+        "text.color": "#F8FAFC",
+        "axes.labelcolor": "#CBD5E1",
+        "axes.titlecolor": "#F8FAFC",
+        "xtick.color": "#AAB4C5",
+        "ytick.color": "#AAB4C5",
+
+        # Smaller, sharper-looking typography
+        "axes.titlesize": 12,
+        "axes.titleweight": "semibold",
+        "axes.labelsize": 9,
+        "xtick.labelsize": 8,
+        "ytick.labelsize": 8,
+        "legend.fontsize": 8,
+
+        # Thin lines and subtle grid
+        "lines.linewidth": 1.8,
+        "lines.markersize": 4,
+        "grid.color": "#334155",
+        "grid.alpha": 0.25,
+        "grid.linewidth": 0.5,
+
+        # Clean borders and legends
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "legend.frameon": False,
+    }
+)
